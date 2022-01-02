@@ -1,0 +1,366 @@
+.tree {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../bg.jpg");
+  display: none;
+  justify-content: space-between;
+  padding: 15px 0;
+  position: relative;
+  margin-top: 70px;
+}
+
+.tree.active {
+  display: flex;
+}
+
+.trees {
+  width: 28%;
+}
+
+.trees__block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.trees-block-container {
+  padding: 10px;
+}
+
+.trees-block-container::before {
+  content: "CHOOSE TREE";
+  margin: 20px 0;
+  display: block;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.trees__block-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.trees__block-item {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 115px;
+  height: 115px;
+  background-size: auto 114px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.trees__block-item.active {
+  border: orange 3px solid;
+}
+
+.trees__block-item:hover {
+  background-size: auto 130px;
+  transition: 0.3s;
+}
+
+.trees__block-item:first-child {
+  background-image: url("../tree/1.png");
+}
+
+.trees__block-item:nth-child(2) {
+  background-image: url("../tree/2.png");
+}
+
+.trees__block-item:nth-child(3) {
+  background-image: url("../tree/3.png");
+}
+
+.trees__block-item:nth-child(4) {
+  background-image: url("../tree/4.png");
+}
+
+.trees__block-item:nth-child(5) {
+  background-image: url("../tree/5.png");
+}
+
+.trees__block-item:nth-child(6) {
+  background-image: url("../tree/6.png");
+}
+
+.trees__block-item img {
+  width: 100%;
+}
+
+/* tree  background  */
+
+.trees__background::before {
+  content: "CHOOSE BACKGROUND";
+  margin: 20px 0;
+  display: block;
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 0 10px;
+}
+
+.trees__background-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.trees__background-item {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 70px;
+  height: 70px;
+  background-size: auto 114px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.trees__background-item.active {
+  border: orange 3px solid;
+}
+
+.trees__background-item:hover {
+  background-size: auto 130px;
+  transition: 0.2s;
+}
+
+.trees__background-item:first-child {
+  background-image: url("../bg/1.jpg");
+}
+
+.trees__background-item:nth-child(2) {
+  background-image: url("../bg/2.jpg");
+}
+
+.trees__background-item:nth-child(3) {
+  background-image: url("../bg/3.jpg");
+}
+
+.trees__background-item:nth-child(4) {
+  background-image: url("../bg/4.jpg");
+}
+
+.trees__background-item:nth-child(5) {
+  background-image: url("../bg/5.jpg");
+}
+
+.trees__background-item:nth-child(6) {
+  background-image: url("../bg/6.jpg");
+}
+
+.trees__background-item:nth-child(7) {
+  background-image: url("../bg/7.jpg");
+}
+
+.trees__background-item:nth-child(8) {
+  background-image: url("../bg/8.jpg");
+}
+
+.trees__background-item:nth-child(9) {
+  background-image: url("../bg/9.jpg");
+}
+
+.trees__background-item:nth-child(10) {
+  background-image: url("../bg/10.jpg");
+}
+
+/* tree lamps */
+
+.tree__snow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.tree__snow::before {
+  content: "CHOOSE SNOW COLOR";
+  margin: 20px 0;
+  display: block;
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  width: 100%;
+  align-self: auto;
+}
+
+.tree__snow-item {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.tree__snow-item:hover {
+  border: 2px solid orange;
+}
+
+.tree__snow-item.active {
+  border: 2px solid orange;
+}
+
+.tree__snow-item:first-child {
+  background: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8
+  );
+}
+
+.tree__snow-item:nth-child(2) {
+  background-color: #3e006f;
+}
+
+.tree__snow-item:nth-child(3) {
+  background-color: white;
+}
+
+.btn-circle {
+  border: 1px solid black;
+  padding: 5px 20px;
+  width: 100px;
+  border-radius: 20px;
+  text-align: center;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.733);
+  font-size: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn-circle:hover {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+}
+
+/* current tree */
+
+.current-tree {
+  width: 44%;
+  background-image: url("../bg/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 90vh;
+  height: 100vh;
+}
+
+.current-tree__item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../tree/1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.current-tree__toys-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.current-tree__toys-container img {
+  position: absolute;
+  width: 50px;
+}
+
+/* tree toys */
+
+.tree-toys {
+  width: 28%;
+}
+
+.tree-toys::before {
+  content: "TOYS";
+  margin: 10px;
+  color: white;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+  display: block;
+  font-size: 24px;
+}
+
+.tree-toys__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.tree-toys__container div {
+  width: 70px;
+  background-image: url("../toys/");
+  height: 70px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.tree-toys__container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.tree-toys__container span {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #3898dd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding-top: 5px;
+  color: white;
+  font-weight: 700;
+  z-index: 11;
+}
+
+/* .favorites */
+
+.favorites {
+}
+
+.favorites::before {
+  content: "You dressed";
+  text-transform: uppercase;
+  margin: 10px 10px;
+  color: white;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+  font-size: 24px;
+  display: block;
+}
+
+.favorites__container {
+  display: flex;
+  margin: 10px;
+  gap: 10px;
+  overflow-x: scroll;
+}
+
+.favorites__container div {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}

@@ -1,0 +1,128 @@
+.header {
+  height: 70px;
+  background-color: #121c1e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+.header__wrapper {
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.header__left,
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  align-self: center;
+  padding: 0 15px;
+}
+
+.header img {
+  width: 48px;
+  height: 60px;
+}
+
+.header__left-logo {
+  background: url("../svg/tree.svg");
+  background-size: contain;
+  width: 48px;
+  height: 60px;
+  display: block;
+}
+
+.header__left-logo:hover {
+  transition: 0.5s;
+  filter: opacity(0.5);
+}
+
+.header__left-link {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.header__left-link:hover {
+  color: orange;
+  transition: 0.3s;
+}
+
+.header__left-link.active {
+  border-bottom: 1px orange solid;
+}
+
+.header__right {
+  gap: 8px;
+}
+
+.header__right-input {
+  height: 25px;
+  padding: 5px 45px 5px 20px;
+  margin: auto 0;
+  border-radius: 20px;
+  border: 1px solid #278d9f;
+  color: #fff;
+  font-size: 18px;
+  background-color: rgba(31, 112, 127, 0.3);
+  background-image: url(../svg/search.svg);
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: center;
+  background-size: 20px;
+  width: 100%;
+}
+
+.header__right-ball {
+  position: relative;
+}
+
+.header__right-block {
+  min-width: 43px;
+  min-height: 55px;
+  position: relative;
+  background-image: url("../svg/ball.svg");
+  background-size: 125%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header__right-block::before {
+  content: "";
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4d8fe0;
+}
+
+.fav-balls-count {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: 600;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/entry.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/toys.css" />
+    <link rel="stylesheet" href="assets/css/tree.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container d-flex header__wrapper">
+        <div class="header__left">
+          <a class="header__left-logo" href=""></a>
+          <a class="header__left-link toy-btn" href="">TOYS</a>
+          <a class="header__left-link tree-btn" href="">TREE</a>
+        </div>
+        <div class="header__right">
+          <input
+            class="header__right-input"
+            placeholder="Search toys"
+            type="text"
+          />
+          <div class="header__right-block">
+            <span class="fav-balls-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="entry active">
+        <div class="entry__text">
+          <h1 class="entry__text-title">New Year's game "Dress up the tree"</h1>
+        </div>
+        <button class="entry__btn">Start</button>
+      </section>
+
+      <section class="toys">
+        <div class="settings">
+          <div class="settings__value">
+            <h2 class="settings__title">FILTERS BY VALUE</h2>
+
+            <div class="settings__value-block">
+              <span class="settings___description">Shape:</span>
+              <div class="settings__value-toys">
+                <img
+                  class="settings__value-toys-figure"
+                  src="assets/svg/ball.svg"
+                  alt="toy image"
+                  data="ball"
+                />
+                <img
+                  class="settings__value-toys-figure"
+                  src="assets/svg/bell.svg"
+                  alt="toy image"
+                  data="bell"
+                />
+                <img
+                  class="settings__value-toys-figure"
+                  src="assets/svg/cone.svg"
+                  alt="toy image"
+                  data="bump"
+                />
+                <img
+                  class="settings__value-toys-figure"
+                  src="assets/svg/snowflake.svg"
+                  alt="toy image"
+                  data="snowflake"
+                />
+                <img
+                  class="settings__value-toys-figure"
+                  src="assets/svg/toy.svg"
+                  alt="toy image"
+                  data="figure"
+                />
+              </div>
+            </div>
+
+            <div class="settings__value-block">
+              <span class="settings___description">Color:</span>
+              <div class="settings__value-colors">
+                <div class="white cube" data="white"></div>
+                <div class="yellow cube" data="yellow"></div>
+                <div class="red cube" data="red"></div>
+                <div class="blue cube" data="blue"></div>
+                <div class="green cube" data="green"></div>
+              </div>
+            </div>
+
+            <div class="settings__value-block">
+              <span class="settings___description">Size</span>
+              <div class="settings__value-toys settings__value-toy">
+                <img
+                  class="settings__value-toys-item"
+                  src="assets/svg/ball.svg"
+                  alt=""
+                  data="large"
+                />
+                <img
+                  class="settings__value-toys-item"
+                  src="assets/svg/ball.svg"
+                  alt=""
+                  data="medium"
+                />
+                <img
+                  class="settings__value-toys-item"
+                  src="assets/svg/ball.svg"
+                  alt=""
+                  data="small"
+                />
+              </div>
+            </div>
+
+            <div class="settings__value-block">
+              <p class="settings___description">
+                Favorite:
+                <input type="checkbox" name="" id="" />
+              </p>
+            </div>
+          </div>
+
+          <!-- <div class="settings__range">
+            <h2 class="settings__title">FILTERS BY RANGE</h2>
+            <div class="settings__range-block">
+              <p class="settings__description">Quantity of copies:</p>
+              <div class="settings__range-range">
+                <span class="settings__range-quantity-min"></span>
+                <input type="range" name="" id="" min="1" max="12" />
+                <span class="settings__range-quantity-max"></span>
+              </div>
+
+              <p class="settings__description">Год приобретения:</p>
+              <div class="settings__range-range">
+                <span class="settings__range-year-min"></span>
+                <input
+                  type="range"
+                  name=""
+                  id=""
+                  min="1950"
+                  max="2020"
+                  step="10"
+                />
+                <span class="settings__range-year-max"></span>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="settings__sort">
+            <h2 class="settings__title">Sort</h2>
+            <select name="" id="setting__sort-input">
+              <option value="a-z">By name from "A" to "Z"</option>
+              <option value="z-a">By name from "Z" to "A"</option>
+              <option value="1-9">By quantity ascending</option>
+              <option value="9-1">By quantity descending</option>
+            </select>
+            <button class="settings__sort-btn">Reset filters</button>
+          </div>
+          <div class="volume"><img src="assets/svg/audio.svg" alt="" /></div>
+        </div>
+        <div class="cards"></div>
+        <div class="opacity"></div>
+      </section>
+
+      <section class="tree">
+        <div class="trees">
+          <div class="trees__btns"></div>
+          <div class="trees-block-container">
+            <div class="trees__block">
+              <div class="trees__block-item" data="1"></div>
+              <div class="trees__block-item" data="2"></div>
+              <div class="trees__block-item" data="3"></div>
+              <div class="trees__block-item" data="4"></div>
+              <div class="trees__block-item" data="5"></div>
+              <div class="trees__block-item" data="6"></div>
+            </div>
+          </div>
+
+          <div class="trees__background">
+            <div class="trees__background-container">
+              <div class="trees__background-item active" data="1"></div>
+              <div class="trees__background-item" data="2"></div>
+              <div class="trees__background-item" data="3"></div>
+              <div class="trees__background-item" data="4"></div>
+              <div class="trees__background-item" data="5"></div>
+              <div class="trees__background-item" data="6"></div>
+              <div class="trees__background-item" data="7"></div>
+              <div class="trees__background-item" data="8"></div>
+              <div class="trees__background-item" data="9"></div>
+              <div class="trees__background-item" data="10"></div>
+            </div>
+          </div>
+
+          <div class="tree__snow">
+            <div class="tree__snow-item" data="pastel"></div>
+            <div class="tree__snow-item" data="berry"></div>
+            <div class="tree__snow-item" data="purple"></div>
+            <div class="tree__snow-btn">
+              <div class="btn-circle">Off</div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="current-tree">
+          <div id="snow"></div>
+          <div class="current-tree__item">
+            <div class="current-tree__toys-container placeholder"></div>
+          </div>
+        </div>
+
+        <div class="tree-toys">
+          <div class="tree-toys__container placeholder"></div>
+          <div class="favorites">
+            <div class="favorites__container">
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tree__opacity"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="container footer_ul d-flex">
+        <li class="footer__ul-li">© 2021 Sh.I</li>
+        <li class="footer__ul-li">
+          <img src="" alt="" />
+        </li>
+      </ul>
+    </footer>
+    <!-- <script src="snow.js" type="module"></script>
+    <script src="./assets/snow/snow.js" type="module"></script>
+    <script src="index.js"></script>
+    <script src="toys.js"></script> -->
+
+    <script src="main.js"></script>
+  </body>
+</html>
