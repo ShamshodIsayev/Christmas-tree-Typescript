@@ -3,8 +3,8 @@ const favoriteCount: HTMLElement = document.querySelector(".fav-balls-count")!;
 
 let toys;
 let currentToys: Array<DataJson>;
-const favorites: Array<object> = [{}];
-
+let favorites: Array<object> = [{}];
+let tempToys: Array<DataJson>;
 
 interface DataJson {
   num: string;
@@ -83,6 +83,7 @@ async function initData(limitedToys?: Array<DataJson>) {
   (data as Array<DataJson>).forEach((ballItem) => {
     setHTML(ballItem);
   });
+  tempToys = currentToys;
   await setToySetting();
 }
 

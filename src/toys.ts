@@ -46,7 +46,7 @@ function setTreeToyHTML(el: DataJson) {
 
   toyContainer.insertAdjacentHTML("beforeend", newToy);
 
-  function setImgsForToys(el: DataJson) {
+  function setImgsForToys(el: DataJson, container = "") {
     let res = "";
     for (let i = 0; i < Number(el.count); i++) {
       res += `<img
@@ -210,11 +210,13 @@ function sortToys(status: string) {
   setToySetting();
 }
 
+// default btn
+
 const defaultSortBtn: HTMLElement = document.querySelector(
   ".settings__sort-btn"
 )!;
 
-defaultSortBtn.addEventListener("click", () => {
+defaultSortBtn.addEventListener("click", (e) => {
   deleteActiveClass(shapesSelect);
   deleteActiveClass(colorSelect);
   deleteActiveClass(sizeSelect);
@@ -261,12 +263,13 @@ for (const toyDiv of toyDivs) {
     img.style.top = tempClientY + "px";
     img.style.left = tempClientX + "px";
 
+    // checkToyCount();
     (e.target as HTMLElement).appendChild(img);
   });
 
   toyDiv.addEventListener(
     "dragover",
-    (e: Event | MouseEvent | CustomEventMouse) => {
+    (e: Event | DragEvent | CustomEventMouse) => {
       tempClientX = String(e.offsetX - 20);
       tempClientY = String(e.offsetY - 20);
     }
@@ -307,14 +310,14 @@ function getImgFromData(img: HTMLImageElement | HTMLElement) {
   return res;
 }
 
-// function checkToyCount() {
-//   const treeBlocks = document.querySelectorAll(".tree-toys__block");
-//   for (const block of treeBlocks) {
-//     const span = block.querySelector("span") as HTMLElement;
-//     const imgs = block.querySelectorAll("img");
-//     span.innerHTML = String(imgs.length - 1);
-//   }
-// }
+function checkToyCount() {
+  const treeBlocks = document.querySelectorAll(".tree-toys__block");
+  for (const block of treeBlocks) {
+    const span = block.querySelector("span") as HTMLElement;
+    const imgs = block.querySelectorAll("img");
+    span.innerHTML = String(imgs.length - 1);
+  }
+}
 
 // search catalog
 // search catalog
